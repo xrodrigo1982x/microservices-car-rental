@@ -1,13 +1,16 @@
 package car.model;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.data.cassandra.mapping.PrimaryKey;
+import org.springframework.data.cassandra.mapping.Table;
 
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
+@Table
 @Data
-public class CouponDiscount {
+public class Coupom {
 
     public enum DiscountType {
         PERCENTAGE {
@@ -28,15 +31,15 @@ public class CouponDiscount {
 
     }
 
-    @Id
+    @PrimaryKey
     private String id;
-    @NotNull
-    private DiscountType type;
+    @NotEmpty
+    private String type;
     @NotNull
     private BigDecimal discount;
 
     public BigDecimal apply(BigDecimal price) {
-        return type.apply(price, discount);
+        return DiscountType.valueOf(type).apply(price, discount);
     }
 
 }

@@ -1,0 +1,21 @@
+{
+  "car": [
+    {
+      "id": "0",
+      "dailyPrice": 245.90
+    }
+  ],
+  "offer": [
+    {
+      "id": "0",
+      "price": 50.45
+    }
+  ],
+  "coupom": [
+    {
+      "id": "extra10",
+      "type": "PERCENTAGE",
+      "discount": 10
+    }
+  ]
+}

@@ -8,11 +8,10 @@ import java.math.BigDecimal;
 
 @Table
 @Data
-public class Car {
+public class Offer {
 
     @PrimaryKey
     private String id;
-
-    private BigDecimal dailyPrice;
+    private BigDecimal price;
 
 }
