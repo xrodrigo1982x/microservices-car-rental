@@ -44,6 +44,13 @@
             <artifactId>spring-boot-starter-data-cassandra</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.spatial4j</groupId>
+            <artifactId>spatial4j</artifactId>
+            <version>0.5</version>
+        </dependency>
+
+
     </dependencies>
 
     <dependencyManagement>
@@ -66,13 +73,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <id>alfresco</id>
-            <name>alfresco</name>
-            <url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
-        </repository>
-    </repositories>
 
 </project>

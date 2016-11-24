@@ -15,10 +15,10 @@ public class Pricing {
     @NotNull
     private Location location;
     @NotNull
-    @JsonFormat(pattern = "YYYY-MM-DD")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date pickUpDate;
     @NotNull
-    @JsonFormat(pattern = "YYYY-MM-DD")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date dropOffDate;
     private List<String> offers;
     private String coupon;
