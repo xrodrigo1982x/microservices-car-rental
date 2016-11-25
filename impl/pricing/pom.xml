@@ -75,8 +75,12 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.13</version>
                 <configuration>
-                    <imageName>microservices/pricing</imageName>
-                    <baseImage>sdorra/oracle-java-8:latest</baseImage>
+                    <imageName>microservices/${project.artifactId}</imageName>
+                    <imageTags>
+                        <imageTag>${project.version}</imageTag>
+                        <imageTag>latest</imageTag>
+                    </imageTags>
+                    <baseImage>lwieske/java-8:server-jre-8u112-slim</baseImage>
                     <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
                     <resources>
                         <resource>
