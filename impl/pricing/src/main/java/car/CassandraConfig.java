@@ -18,6 +18,7 @@ import org.springframework.data.cassandra.config.java.AbstractCassandraConfigura
 import org.springframework.data.cassandra.mapping.BasicCassandraMappingContext;
 import org.springframework.data.cassandra.mapping.CassandraMappingContext;
 import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
+import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -26,6 +27,7 @@ import java.util.List;
 
 @Configuration
 @EnableCassandraRepositories
+@EnableSpringDataWebSupport
 public class CassandraConfig extends AbstractCassandraConfiguration {
 
     @Value("${cassandra.keyspace:price}")
